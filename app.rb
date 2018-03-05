@@ -15,7 +15,11 @@ get '/random-cat' do
   erb(:index)
 end
 
-get '/named-cat' do
+get '/cat-form' do
+  erb(:form)
+end
+
+post '/named-cat' do
   p params
   @name = params[:name]
   @style = 'border-style:dashed;border-color:' + params[:color].to_s
